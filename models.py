@@ -27,7 +27,7 @@ Have title and release year
 class Person(db.Model):  
   __tablename__ = 'People'
   
-  id = Column(int, primary_key=True)
+  id = Column(Integer, primary_key=True)
   name = Column(String)
   catchphrase = Column(String)
 
