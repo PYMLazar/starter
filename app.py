@@ -6,9 +6,9 @@ from models import setup_db
 def create_app(test_config=None):
 
     app = Flask(__name__)
-    app = create_app()
+   #app = create_app()
     setup_db(app)
-    app.config.from_object('config')
+   #app.config.from_object('config')
     CORS(app)
 
     @app.route('/')
@@ -24,7 +24,7 @@ def create_app(test_config=None):
 
     return app
 
-#app = create_app()
+    app = create_app()
 
 if __name__ == '__main__':
     app.run()
