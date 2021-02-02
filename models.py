@@ -11,17 +11,12 @@ db = SQLAlchemy()
 setup_db(app)
     binds a flask application and a SQLAlchemy service
 '''
-print(1)
+
 def setup_db(app, database_path=database_path):
-    print(2)
     app.config["SQLALCHEMY_DATABASE_URI"] = database_path
-    print(3)
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-    print(3)
     db.app = app
-    print(4)
     db.init_app(app)
-    print(5)
     db.create_all()
 
 
