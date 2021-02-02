@@ -29,6 +29,7 @@ class Person(db.Model):
 
   id = Column(Integer, primary_key=True)
   name = Column(String)
+  gender = Column(String)
   catchphrase = Column(String)
 
   def __init__(self, name, catchphrase=""):
